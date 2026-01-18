@@ -1,17 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>AWS Microservices App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Page Website in One File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        nav {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .page {
+            display: none; /* Hide all pages by default */
+            padding: 20px;
+            background: white;
+            min-height: 80vh;
+        }
+        .active {
+            display: block; /* Show active page */
+        }
+    </style>
 </head>
 <body>
-  <h1>AWS DevOps Microservices  Project</h1>
 
-  <button onclick="loadUsers()">Load Users</button>
-  <button onclick="loadOrders()">Load Orders</button>
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('about')">About</a>
+    </nav>
 
-  <pre id="result"></pre>
+    <!-- Page 1 -->
+    <div id="home" class="page active">
+        <h1>Welcome to My Website</h1>
+        <p>This is the home page. Everything is inside one HTML file.</p>
+    </div>
 
-  <script src="../src/app.js"></script>
+    <!-- Page 2 -->
+    <div id="about" class="page">
+        <h1>About Us</h1>
+        <p>This is the about page. We switched content without loading a new file.</p>
+    </div>
+
+    <script>
+        // Function to switch between pages
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            // Show the selected page
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+
 </body>
 </html>
