@@ -10,8 +10,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/Amruta9993/Frontend-new-project.git',
-                    credentialsId: 'frontend'
+                    url: 'https://github.com/Ramyasiva07/frontend-repo.git',
+                    credentialsId: 'aws-credentials'
             }
         }
 
