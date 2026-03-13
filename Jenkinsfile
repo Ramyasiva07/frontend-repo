@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         AWS_DEFAULT_REGION = 'us-east-1'
-        S3_BUCKET = 'rambucket07'
-        CLOUDFRONT_DISTRIBUTION_ID = 'E2WN49G1JQBF0E'
+        S3_BUCKET = 'ramya-buck7 '
+        CLOUDFRONT_DISTRIBUTION_ID = 'E3H86KL6QWML52'
     }
 
     stages {
